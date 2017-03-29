@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "FormFiller",
+  "version": "1.0",
+
+  "description": "Fills a form at a test site",
+
+  "icons": {
+    "48": "icons/48.png",
+    "96": "icons/96.png"
+  },
+
+  "permissions": [
+      "activeTab"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["*://ghost.aesthetic.ru/plugin/*"],
+      "js": ["runinsidehtml.js"]
+    }
+  ],
+
+  "browser_action": {
+      "default_icon": "icons/32.png",
+      "default_title": "FormFiller",
+      "default_popup": "popup/chooseid.html"
+  }
+}
